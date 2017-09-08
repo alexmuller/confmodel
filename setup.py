@@ -20,6 +20,7 @@ setup(
     author_email='dev@praekeltfoundation.org',
     packages=find_packages(),
     install_requires=[
+        'six>=1.10.0,<2.0',
         'zope.interface',
     ],
     classifiers=[

@@ -4,6 +4,8 @@ import textwrap
 from confmodel.errors import ConfigError
 from confmodel.interfaces import IConfigData
 
+from six import with_metaclass
+
 
 class ConfigField(object):
     """
@@ -313,7 +315,7 @@ class ConfigMetaClass(type):
         return cls
 
 
-class Config(object):
+class Config(with_metaclass(ConfigMetaClass, object)):
     """
     Config object.
     """
