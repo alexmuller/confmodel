@@ -1,5 +1,10 @@
 from copy import deepcopy
-from urllib2 import urlparse
+
+try:
+    from urllib2 import urlparse
+except ImportError:
+    import urllib.parse as urlparse
+
 import re
 
 from confmodel.config import ConfigField
